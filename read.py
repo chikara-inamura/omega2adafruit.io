@@ -8,7 +8,7 @@ import time
 import logging
 import logging.handlers
 
-import Secrets
+from Secrets import * 
 
 sampledelay = 6
 restartsocketsamplecount = (60*60)/sampledelay
@@ -84,6 +84,10 @@ def adafruitIoClient():
           # last = now
 
           response = urllib2.urlopen(req)
+
+          print 'Response Start'
+          print response
+          print 'Response End'
 
           time.sleep(sampledelay)
           i = i + 1
