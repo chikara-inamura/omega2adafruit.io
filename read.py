@@ -86,7 +86,7 @@ def adafruitIoClient():
           response = urllib2.urlopen(req)
 
           print 'Response Start'
-          print response
+          print response.read()
           print 'Response End'
 
           time.sleep(sampledelay)
